@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Всплывающее окно</title>
-	
+
 </head>
+
 <body>
-<style>
-	.hidden {
-  		display: none;
-	}
-	#b-modal {
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0,0,0,0.7);
-		text-align: center;
-		font-size: 0;
-		overflow-y: auto;
-	}
-	#b-modal:before {
-		content:'';
-		display: inline-block;
-		height: 100%;
-		vertical-align: middle;
-	}
-	.b-modal__content {
-		background: #fff;
-		padding: 10px;
-		margin: 40px 0;
-		display: inline-block; 
-		vertical-align: middle;
-		font-size: 14px;
-		max-width: 450px;
-	}
-</style>
+	<style>
+		.hidden {
+			display: none;
+		}
+		#b-modal {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.7);
+			text-align: center;
+			font-size: 0;
+			overflow-y: auto;
+			padding: 10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		#b-modal:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+		.b-modal__content {
+			background: #fff;
+			padding: 10px;
+			margin: 40px 0;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			max-width: 600px;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	</style>
 	<button id="btn">жмяк!</button>
-	
+
 	<!--==========	Модальное окно	===========-->
 	<div id="b-modal" class="hidden">
 		<div class="b-modal__content">
@@ -47,14 +57,15 @@
 			</p>
 		</div>
 	</div>
-	
+
 	<!--==========	END //Модальное окно	===========-->
 	<script>
 		var $btn = document.getElementById('btn');
-		var	$modal = document.getElementById('b-modal');
-		$btn.onclick = function(){
+		var $modal = document.getElementById('b-modal');
+		$btn.onclick = function () {
 			$modal.className = "";
 		};
 	</script>
 </body>
+
 </html>
